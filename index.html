@@ -2,16 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0 user-scalable=no">
     <title>smilevue</title>
-    <style>
-      .test {
-        width: 20rem;
-        height: 10rem;
-        background-color: yellow;
-        font-size: 1rem;
-      }
-    </style>
+   
   </head>
   <body>
     <div id="app">
@@ -22,11 +15,12 @@
   </body>
   <script>
     //获取屏幕宽度
-    let clientwidth = document.documentElement.clientWidth || document.body.clientWidth
+    let htmlwidth = document.documentElement.clientWidth || document.body.clientWidth 
+    if(htmlwidth > 750){htmlwidth = 750}
     //获取HTML根元素
     let htmlDom = document.getElementsByTagName('html')[0]
     //设置html根元素的字体大小
-    htmlDom.style.fontSize = clientwidth/20 + 'px'
+    htmlDom.style.fontSize = htmlwidth/20 + 'px'
     
     
   </script>
